@@ -48,6 +48,16 @@ document.getElementById('btn-parallelogram').addEventListener('click', function(
     areaResult.innerText = parallelogramArea;
 })
 
+// ----------------------- Rhombus calculation ------------------------------//
+document.getElementById('btn-rhombus').addEventListener('click', function(){
+   
+    const rhombusFieldValue1 = getFirstInputFieldById('rhombus-field-1');
+    const rhombusFieldValue2 = getSecondInputField2ById('rhombus-field-2');
 
+    const rhombusArea = 0.5 * rhombusFieldValue1 * rhombusFieldValue2;
+
+    const areaResult = document.getElementById('result-rhombus');
+    areaResult.innerText = rhombusArea;
+})
 
 
