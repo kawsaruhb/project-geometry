@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Genius</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
@@ -29,18 +30,21 @@
         <!-- Geometry section  -->
         <section class="mt-12 mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-1 md:order-1">
+
+                <!---------------------------- Triangle --------------------------->
+                <div onmouseover="getRandomColor()" class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-1 md:order-1">
                     <img src="./images/triangle.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Triangle</h3>
                     <p class="mb-2">Area(A) = 0.5 x b x h</p>
                     <div class="text-center">
-                        <input id="" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="b">
-                        <input id="" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="h">
+                        <input id="triangle-field-1" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="b">
+                        <input id="triangle-field-2" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="h">
                     </div>
 
-                    <button id="" class="w-11/12 bg-blue-800 px-6 py-2 rounded-lg text-white font-medium hover:bg-sky-700 mt-3">Calculate</button>
+                    <button id="btn-triangle" class="w-11/12 bg-blue-800 px-6 py-2 rounded-lg text-white font-medium hover:bg-sky-700 mt-3">Calculate</button>
                 </div>
 
+                <!---------------------------- Rectangle --------------------------->
                 <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-2 md:order-2">
                     <img src="./images/rectangle.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Rectangle</h3>
@@ -53,6 +57,7 @@
                     <button id="" class="w-11/12 bg-blue-800 px-6 py-2 rounded-lg text-white font-medium hover:bg-sky-700 mt-3">Calculate</button>
                 </div>
 
+                <!---------------------------- Parallelogram --------------------------->
                 <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-3 md:order-3">
                     <img src="./images/parallelogram.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Parallelogram</h3>
@@ -65,10 +70,18 @@
                     <button id="" class="w-11/12 bg-blue-800 px-6 py-2 rounded-lg text-white font-medium hover:bg-sky-700 mt-3">Calculate</button>
                 </div>
 
-                <div class="bg-slate-50 p-8 rounded-3xl grid text-center font-semibold underline underline-offset-4 shadow-lg order-7 md:order-4">
-                    <h1>Area Calculation</h1>
+                <!---------------------------- Area Calculation --------------------------->
+                <div id="area-result" class="bg-slate-50 p-8 rounded-3xl grid shadow-lg order-7 md:order-4">
+                    <h1 class="text-center font-semibold underline underline-offset-4">Area Calculation</h1>
+                    <h2 id="result-triangle">Triangle Area</h2>
+                    <h2 id="result-rectangle">Rectangle Area</h2>
+                    <h2 id="result-parallelogram">Parallelogram Area</h2>
+                    <h2 id="result-rhombus">Rhombus Area</h2>
+                    <h2 id="result-pentagon">Pentagon Area</h2>
+                    <h2 id="result-ellipse">Ellipse Area</h2>
                 </div>
 
+                <!---------------------------- Rhombus --------------------------->
                 <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-4 md:order-5">
                     <img src="./images/rhombus.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Rhombus</h3>
@@ -81,6 +94,7 @@
                     <button id="" class="w-11/12 bg-blue-800 px-6 py-2 rounded-lg text-white font-medium hover:bg-sky-700 mt-3">Calculate</button>
                 </div>
 
+                <!---------------------------- Pentagon --------------------------->
                 <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-5 md:order-6">
                     <img src="./images/pentagon.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Pentagon</h3>
@@ -93,6 +107,7 @@
                     <button id="" class="w-11/12 bg-blue-800 px-6 py-2 rounded-lg text-white font-medium hover:bg-sky-700 mt-3">Calculate</button>
                 </div>
 
+                <!---------------------------- Ellipse --------------------------->
                 <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-6 md:order-7">
                     <img src="./images/ellipse.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Ellipse</h3>
@@ -107,6 +122,22 @@
             </div>
         </section>
     </main>
+    <script>
+
+    function getRandomColor() {
+    const availableCharacters = '0123456789ABCDEF';
+    const availableCharacterLength = availableCharacters.length;
+
+    let color = '#';
+
+    for (let i = 0; i < 6; i++) {
+      color += availableCharacters[Math.floor(Math.random() * availableCharacterLength)];
+    }
+
+    return color;
+}
+    </script>
+    <script src="./js/geometry.js"></script>
 </body>
 
 </html>
