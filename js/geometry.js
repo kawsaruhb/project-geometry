@@ -60,4 +60,14 @@ document.getElementById('btn-rhombus').addEventListener('click', function(){
     areaResult.innerText = rhombusArea;
 })
 
+// ------------------------ Pentagon calculation ----------------------------//
+document.getElementById('btn-pentagon').addEventListener('click', function(){
+   
+    const pentagonFieldValue1 = getFirstInputFieldById('pentagon-field-1');
+    const pentagonFieldValue2 = getSecondInputField2ById('pentagon-field-2');
 
+    const pentagonArea = 0.5 * pentagonFieldValue1 * pentagonFieldValue2;
+
+    const areaResult = document.getElementById('result-pentagon');
+    areaResult.innerText = pentagonArea;
+})
