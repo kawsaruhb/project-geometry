@@ -16,20 +16,11 @@
                 <span class="font-semibold text-2xl tracking-tight">Interactive <br>
                     Geometry Genius</span>
             </div>
-            <div class="block lg:hidden">
-                <button
-                    class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <title>Menu</title>
-                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                    </svg>
-                </button>
-            </div>
             <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                 <div class="text-sm lg:flex-grow">
                 </div>
                 <div>
-                    <button class="bg-white px-6 py-2 rounded-lg text-black font-medium hover:bg-slate-300 mt-3" id="btn-withdraw">Blog</button>
+                    <button onclick = "window.location.href='qa.html';" class="bg-white px-6 py-2 rounded-lg text-black font-medium hover:bg-slate-300 mt-3" id="btn-withdraw">Blog</button>
                 </div>
             </div>
         </nav>
@@ -37,8 +28,8 @@
     <main>
         <!-- Geometry section  -->
         <section class="mt-12 mx-auto">
-            <div class="grid grid-cols-4 gap-4">
-                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-1 md:order-1">
                     <img src="./images/triangle.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Triangle</h3>
                     <p class="mb-2">Area(A) = 0.5 x b x h</p>
@@ -49,18 +40,20 @@
 
                     <button id="" class="w-11/12 bg-blue-800 px-6 py-2 rounded-lg text-white font-medium hover:bg-sky-700 mt-3">Calculate</button>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg">
+
+                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-2 md:order-2">
                     <img src="./images/rectangle.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Rectangle</h3>
                     <p class="mb-2">Area(A) = w x l</p>
                     <div class="text-center">
-                        <input id="" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="b">
-                        <input id="" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="h">
+                        <input id="" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="w">
+                        <input id="" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="l">
                     </div>
 
                     <button id="" class="w-11/12 bg-blue-800 px-6 py-2 rounded-lg text-white font-medium hover:bg-sky-700 mt-3">Calculate</button>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg">
+
+                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-3 md:order-3">
                     <img src="./images/parallelogram.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Parallelogram</h3>
                     <p class="mb-2">Area(A) = b x h</p>
@@ -72,45 +65,45 @@
                     <button id="" class="w-11/12 bg-blue-800 px-6 py-2 rounded-lg text-white font-medium hover:bg-sky-700 mt-3">Calculate</button>
                 </div>
 
-                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center ">
-                    
+                <div class="bg-slate-50 p-8 rounded-3xl grid text-center font-semibold underline underline-offset-4 shadow-lg order-7 md:order-4">
+                    <h1>Area Calculation</h1>
                 </div>
 
-                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg">
+                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-4 md:order-5">
                     <img src="./images/rhombus.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Rhombus</h3>
                     <p class="mb-2">Area(A) = 0.5 x d1 x d2</p>
                     <div class="text-center">
-                        <input id="" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="b">
-                        <input id="" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="h">
+                        <input id="" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="d1">
+                        <input id="" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="d2">
                     </div>
 
                     <button id="" class="w-11/12 bg-blue-800 px-6 py-2 rounded-lg text-white font-medium hover:bg-sky-700 mt-3">Calculate</button>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg">
+
+                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-5 md:order-6">
                     <img src="./images/pentagon.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Pentagon</h3>
                     <p class="mb-2">Area(A) = 0.5 x p x b</p>
                     <div class="text-center">
+                        <input id="" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="p">
                         <input id="" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="b">
-                        <input id="" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="h">
                     </div>
 
                     <button id="" class="w-11/12 bg-blue-800 px-6 py-2 rounded-lg text-white font-medium hover:bg-sky-700 mt-3">Calculate</button>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg">
+
+                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-6 md:order-7">
                     <img src="./images/ellipse.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Ellipse</h3>
                     <p class="mb-2">Area(A) = &pi;ab</p>
                     <div class="text-center">
+                        <input id="" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="a">
                         <input id="" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="b">
-                        <input id="" class="w-1/4 px-4 py-1 bg-slate-300" type="text" placeholder="h">
                     </div>
 
                     <button id="" class="w-11/12 bg-blue-800 px-6 py-2 rounded-lg text-white font-medium hover:bg-sky-700 mt-3">Calculate</button>
                 </div>
-                
-                <div></div>
             </div>
         </section>
     </main>
