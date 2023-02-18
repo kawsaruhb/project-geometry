@@ -71,3 +71,15 @@ document.getElementById('btn-pentagon').addEventListener('click', function(){
     const areaResult = document.getElementById('result-pentagon');
     areaResult.innerText = pentagonArea;
 })
+
+// ----------------------- Ellipse calculation -----------------------------//
+document.getElementById('btn-ellipse').addEventListener('click', function(){
+   
+    const ellipseFieldValue1 = getFirstInputFieldById('ellipse-field-1');
+    const ellipseFieldValue2 = getSecondInputField2ById('ellipse-field-2');
+
+    const ellipseArea = 3.1416 * ellipseFieldValue1 * ellipseFieldValue2;
+
+    const areaResult = document.getElementById('result-ellipse');
+    areaResult.innerText = ellipseArea;
+})
