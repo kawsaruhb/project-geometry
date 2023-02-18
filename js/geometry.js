@@ -36,7 +36,17 @@ document.getElementById('btn-rectangle').addEventListener('click', function(){
     areaResult.innerText = rectangleArea;
 })
 
+//-------------------- Parallelogram calculation --------------------------//
+document.getElementById('btn-parallelogram').addEventListener('click', function(){
+   
+    const parallelogramFieldValue1 = getFirstInputFieldById('parallelogram-field-1');
+    const parallelogramFieldValue2 = getSecondInputField2ById('parallelogram-field-2');
 
+    const parallelogramArea = parallelogramFieldValue1 * parallelogramFieldValue2;
+
+    const areaResult = document.getElementById('result-parallelogram');
+    areaResult.innerText = parallelogramArea;
+})
 
 
 
