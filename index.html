@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Genius</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
@@ -32,7 +31,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
                 <!---------------------------- Triangle --------------------------->
-                <div onmouseover="getRandomColor()" class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-1 md:order-1">
+                <div id="triangle" onmouseover="getRandomColor()" class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-1 md:order-1">
                     <img src="./images/triangle.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Triangle</h3>
                     <p class="mb-2">Area(A) = 0.5 x b x h</p>
@@ -45,7 +44,7 @@
                 </div>
 
                 <!---------------------------- Rectangle --------------------------->
-                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-2 md:order-2">
+                <div id="rectangle" class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-2 md:order-2">
                     <img src="./images/rectangle.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Rectangle</h3>
                     <p class="mb-2">Area(A) = w x l</p>
@@ -58,7 +57,7 @@
                 </div>
 
                 <!---------------------------- Parallelogram --------------------------->
-                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-3 md:order-3">
+                <div id="parallelogram" class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-3 md:order-3">
                     <img src="./images/parallelogram.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Parallelogram</h3>
                     <p class="mb-2">Area(A) = b x h</p>
@@ -82,7 +81,7 @@
                 </div>
 
                 <!---------------------------- Rhombus --------------------------->
-                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-4 md:order-5">
+                <div id="rhombus" class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-4 md:order-5">
                     <img src="./images/rhombus.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Rhombus</h3>
                     <p class="mb-2">Area(A) = 0.5 x d1 x d2</p>
@@ -95,7 +94,7 @@
                 </div>
 
                 <!---------------------------- Pentagon --------------------------->
-                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-5 md:order-6">
+                <div id="pentagon" class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-5 md:order-6">
                     <img src="./images/pentagon.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Pentagon</h3>
                     <p class="mb-2">Area(A) = 0.5 x p x b</p>
@@ -108,7 +107,7 @@
                 </div>
 
                 <!---------------------------- Ellipse --------------------------->
-                <div class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-6 md:order-7">
+                <div id="ellipse" class="bg-slate-50 p-8 rounded-3xl grid place-items-center shadow-lg order-6 md:order-7">
                     <img src="./images/ellipse.png" alt="">
                     <h3 class="text-3xl text-black mt-2 mb-3 font-medium">Ellipse</h3>
                     <p class="mb-2">Area(A) = &pi;ab</p>
@@ -122,20 +121,18 @@
             </div>
         </section>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-
-    function getRandomColor() {
-    const availableCharacters = '0123456789ABCDEF';
-    const availableCharacterLength = availableCharacters.length;
-
-    let color = '#';
-
-    for (let i = 0; i < 6; i++) {
-      color += availableCharacters[Math.floor(Math.random() * availableCharacterLength)];
-    }
-
-    return color;
-}
+        $(document).ready(function(){
+            $("#ellipse, #pentagon, #rhombus, #parallelogram, #rectangle, #triangle").hover(function(){
+            var r = Math.floor(Math.random() * 255);
+            var g = Math.floor(Math.random() * 255);
+            var b = Math.floor(Math.random() * 255);
+             var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+             $(this).css("background-color",color);
+            })
+            
+        });
     </script>
     <script src="./js/geometry.js"></script>
 </body>
